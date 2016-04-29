@@ -9,7 +9,6 @@ class Application(tornado.web.Application):
         settings = dict(
             autoescape=None,
             debug=config.DEBUG,
-            # cookie_secret=base64.b64encode(uuid.uuid4().bytes + uuid.uuid4().bytes)
             cookie_secret=config.cookie_secret,
             template_path=config.template_path,
             static_path=config.static_path,
