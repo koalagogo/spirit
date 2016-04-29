@@ -17,5 +17,5 @@ class Config(object):
         self.DEBUG = True
         self.cookie_secret = base64.b64encode(
             uuid.uuid4().bytes + uuid.uuid4().bytes)
-        self.template_path = os.path.abspath('../views')
+        self.template_path = os.path.abspath('../templates/')
         self.static_path = os.path.abspath('../static')
