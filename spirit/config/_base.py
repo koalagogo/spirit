@@ -19,3 +19,6 @@ class Config(object):
             uuid.uuid4().bytes + uuid.uuid4().bytes)
         self.template_path = os.path.abspath('../templates/')
         self.static_path = os.path.abspath('../static')
+        self.mongodb_host = '127.0.0.1'
+        self.mongodb_port = 27017
+        self.db_name = 'spirit'

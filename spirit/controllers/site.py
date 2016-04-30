@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-import tornado.web
+# import tornado.web
+from ._base import BaseHandler
 
 
-class IndexHandler(tornado.web.RequestHandler):
+class IndexHandler(BaseHandler):
     def get(self):
+        print self.application.db
         self.write('Index')
