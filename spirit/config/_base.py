@@ -9,6 +9,8 @@ def load_config(mode):
         from .development import config
     elif mode == 'production':
         from .production import config
+    elif mode == 'testing':
+        from .testing import config
     return config
 
 

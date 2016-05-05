@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 import pytest
 
-from spirit.app import Application
-from spirit.config import load_config
-
-
-@pytest.fixture
-def app():
-    return Application(load_config('development'))
+from . import app  # noqa
 
 
 @pytest.mark.gen_test
