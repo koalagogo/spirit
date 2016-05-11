@@ -13,7 +13,7 @@ class Application(tornado.web.Application):
             cookie_secret=config.cookie_secret,
             template_path=config.template_path,
             static_path=config.static_path,
-            xsrf_cookies=True,
+            xsrf_cookies=config.xsrf_cookies,
         )
 
         self.db = getattr(

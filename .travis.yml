@@ -8,7 +8,6 @@ services:
 
 env:
   - TOX_ENV=py27
-  - TOX_ENV=pypy
 
 install:
   - pip install flake8
