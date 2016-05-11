@@ -3,7 +3,9 @@ from ._base import Config
 
 
 class DevelopmentConfig(Config):
-    pass
+    def __init__(self):
+        Config.__init__(self)
+        self.xsrf_cookies = False
 
 
 config = DevelopmentConfig()

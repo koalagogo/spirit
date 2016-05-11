@@ -17,6 +17,7 @@ def load_config(mode):
 class Config(object):
     def __init__(self):
         self.DEBUG = True
+        self.xsrf_cookies = True
         self.cookie_secret = base64.b64encode(
             uuid.uuid4().bytes + uuid.uuid4().bytes)
         self.template_path = os.path.abspath('../templates/')
