@@ -25,3 +25,5 @@ class Config(object):
         self.mongodb_host = '127.0.0.1'
         self.mongodb_port = 27017
         self.db_name = 'spirit'
+        self.wechat_appid = ''
+        self.wechat_secret = ''

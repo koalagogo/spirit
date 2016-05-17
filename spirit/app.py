@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import tornado.web
 import pymongo
+from wechatpy import WeChatClient
 
 from .routers import routers
 
@@ -15,6 +16,9 @@ class Application(tornado.web.Application):
             static_path=config.static_path,
             xsrf_cookies=config.xsrf_cookies,
         )
+
+        self.wechat_client = WeChatClient(config.wechat_appid,
+                                          config.wechat_secret)
 
         self.db = getattr(
             pymongo.MongoClient(config.mongodb_host, config.mongodb_port),
